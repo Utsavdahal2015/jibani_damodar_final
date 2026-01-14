@@ -184,7 +184,8 @@ th, td {
 
         .btn_container{
             height: 40px;
-            width:390px;
+            width: 94%;
+            max-width: 400px;
             background-color: rgb(255, 255, 255);
             border-radius: 40px;
             position: fixed;
@@ -327,9 +328,9 @@ th, td {
                     <thead>
                     <tr>
                         <th style="width: 9%">क्र.<br>सं.</th>
-                        <th style="width: 37%">पूरा नाम</th>
+                        <th style="width: 36%">पूरा नाम</th>
                         <th style="width: 30%">ठेगाना</th>
-                        <th style="width: 24%">सम्पर्क <br>नम्बर</th>
+                        <th style="width: 25%">सम्पर्क <br>नम्बर</th>
                     </tr>
                     
                     </thead>
@@ -381,7 +382,7 @@ th, td {
                 <!-- <form action="connect.php" method="POST"> -->
                 <form id="list" action="https://script.google.com/macros/s/AKfycbw4EooSdoBwqvmcvYVmlUO9aDHcyoukxR9GPLlf01ukHV_M3qCRxxTHQoYNGlfuhS1Qdw/exec" method="POST" target="hidden_iframe">
                     <h4 style="font-weight: 600; color:#0f204e; text-align: left;">तपाईंको जानकारी ?</h4>
-                    <input type="text" name="fullName" placeholder="पूरा नाम" maxlength="30">
+                    <input type="text" name="fullName" placeholder="पूरा नाम" maxlength="30" required>
                     <input type="text" name="address" placeholder="ठेगाना" maxlength="30">
                     <input type="tel" name="phoneNum" placeholder="सम्पर्क नम्बर" maxlength="10">
                     <input type="hidden" name="clientSubmitTime" id="clientSubmitTime">
