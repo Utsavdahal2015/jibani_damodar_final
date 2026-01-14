@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <title>जिवनी | स्व. दामाेदर दाहाल</title>
     <style>
         * {
@@ -31,7 +36,7 @@
             max-width: 400px;
             height: auto;
             margin: auto;
-            padding: 0px;
+            padding: 0 0 85px 0;
             position: relative;   
         }
 
@@ -56,25 +61,13 @@
             cursor: pointer;
         }
 
-        .btn_container{
-            height: 40px;
-            width: 94%;
-            max-width: 400px;
-            background-color: rgb(255, 255, 255);
-            border-radius: 40px;
-            position: fixed;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-
-        }
 
     .custom-image{
         width: 160px;
         height: auto;
         position: absolute;
         left: 50%;
-        top: 160px;
+        top: 150px;
         transform: translateX(-50%);
     }
 
@@ -96,7 +89,178 @@
         top: 205px;
     }
 
+        /* .new_btn{            
+        background: linear-gradient(135deg, #152A57, #1E3A8A);
+        font-size: 14px;  
+        font-family: "Baloo 2", sans-serif; 
+        font-weight: 600;
+        color: white; 
+        cursor: pointer;  
+        margin-top: 0px;
+        margin-bottom: 15px;
+        border: 2px solid rgba(6, 160, 180, 0.288); 
+        transition: all 0.2s ease;
+        } */
         
+      .new_btn {
+    background: linear-gradient(135deg, #152A57, #1E3A8A);
+    font-size: 14px;
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+
+    /* Sticky logic */
+    position: sticky;
+    top: 80vh; /* <-- Starts sticking when it reaches 60% of viewport height */
+    
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    transition: all 0.2s ease;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+        /* 'Online upastithi janaunuhos' effect */
+            .new_btn:active {
+            transform: scale(0.92); /* Slight shrink effect when clicked */
+        }
+
+        /* Animation for the shrink effect */
+        @keyframes shrink {
+            0% {
+                transform: scale(1);
+            }
+           50% {
+                 transform: scale(0.92);
+            }
+            100% {
+                transform: scale(1);
+            } 
+        }
+        .new_btn.shrink-effect {
+            animation: shrink 0.5s ease; /* Apply the shrink animation */
+        }
+
+        .new_btn:focus {
+            outline: none;  /* Removes the white border when clicked */
+        }
+
+
+        .thank-you-popup {
+        display: none;
+        width: 250px;
+        height: 80px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #ffffff;
+        color: #152A57;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 550;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 4px 10px #152a57b9;
+        z-index: 999;
+        } 
+        
+        table {
+    width: 100%;
+    table-layout: fixed; /* Essential to keep columns from expanding */
+    border-collapse: collapse;
+    border: 1px solid white;
+    margin-top: 15px;
+    margin-bottom: 100px;
+}
+
+th, td {
+    padding: 8px 4px;
+    border: 1px solid white;
+    text-align: left;
+    vertical-align: top;   /* Keeps content aligned to top if one row grows tall */
+    
+    /* These three lines handle the line breaking */
+    white-space: normal;    /* Allows text to wrap to a new line */
+    word-wrap: break-word;  /* Standard line breaking */
+    overflow-wrap: break-word; /* Modern line breaking */
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3); /* Light part */
+  border-top: 4px solid white; /* White spinning part */
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.modal{
+            display: none;
+            position: fixed;
+            top: 30%; /* Adjust vertical position */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #cfcfcf;
+            box-shadow: 0px 4px 10px #2c2929;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            height: 280px;
+            text-align: center;  
+            justify-content:center ;
+            z-index: 999;
+        }
+        input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 12px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #0f204e;
+        }
+
+        .submit{
+            height: 40px;
+            width: 125px;
+            color:white;
+            background-color: #0f204e;
+            border-radius: 5px;
+            margin-top: 3px; /* Add some spacing above the button */
+           
+            display: block;
+            right: 35px;
+        }
+
      </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,8 +269,10 @@
 
 </head>
 <body>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
     <div class="container">
-        <div style="margin-top: 10px;">आयो टप्प टिप्यो लग्यो, मिति पुग्यो टारेर टर्दैन त्यो,<br>
+        <div style="margin-top: 15px;">आयो टप्प टिप्यो लग्यो, मिति पुग्यो टारेर टर्दैन त्यो,<br>
             इन्द्रै विन्ती गरुन् झुकेर पदमा, त्यो विन्ती मान्दैन त्यो</div>
 
         <img src="birth.png" class="birth">
@@ -119,39 +285,42 @@
 
         
         <div style="position: absolute; right:0px; top: 228px; font-size: 16px; font-weight: 600;">स्वर्गारोहण<br></div>
-        <div style="position: absolute; right:0px; top: 248px;">२०८१/०१/१८</div>
+        <div style="position: absolute; right:0px; top: 248px;">२०८२/१०/१२</div>
         
         <a href="https://drive.google.com/drive/folders/1On6HS_gh-qa3DrkvRJx12DWqCjD-UP_2?usp=sharing" target="_blank">
             <img src="Picture.png" class="custom-image">
         </a>
 
-        <div class="text-large" style="margin-top: 40px;">हार्दिक श्रद्धाञ्जली</div>
+        <div class="text-large" style="margin-top: 20px; font-size: 50px;">जिवनी</div>
 
-        <div class="text-large" style="margin-top: 200px;">स्व. दामोदर दाहाल</div>
+        <div class="text-large" style="margin-top: 200px;">दामोदर दाहाल</div>
     
         
         <div style="text-align: justify; margin-top: 10px;  margin-bottom: 20px;">
-            दाहाल परिवारका अग्रज व्यक्तित्व, बद्लिदो समय अनुसारको सोच राख्ने, धेरै जनाको अन्तिम समयमा साथ दिनुहुने, निरन्तरता, अग्रसरता र परिश्रमका प्रतिक दामोदर दाहालको जन्म वि.सं. १९९७ जेष्ठ २८ गते भएको थियो । ताप्लेजुङ्ग जिल्ला आङ्खोप, मालबासेमा अभिचन्द्रकी धर्मपत्नी गौराको कोखबाट काईलो सुपुत्रका रुपमा दाहालको जन्म भयो ।
-            <br>
+            दाहाल परिवारका अग्रज व्यक्तित्व, बद्लिदो समय अनुसारको सोच राख्ने, धेरै जनाको अन्तिम समयमा साथ दिनुहुने, निरन्तरता, अग्रसरता र परिश्रमका प्रतिक दामोदर दाहालको जन्म वि.सं. १९९७ जेष्ठ २८ गते साेमबारका दिन भएको थियो । ताप्लेजुङ्ग जिल्ला आङ्खोप, मालबासेमा अभिचन्द्रकी धर्मपत्नी गौराको कोखबाट काईलो सुपुत्रका रुपमा दाहालको जन्म भयो ।
+            <br><br>
             २००७ साल जेष्ठ ५ गते १० वर्षको उमेरमा पाँचथर जिल्ला तिखेम्बा निवासी पिता भवानीप्रसाद र माता लिलावती नेपालकी जेठी सुपुत्री मेनुका नेपालसँग वहाँ विवाह बन्धनमा बाँधिनुभयो ।
-            <br>
+            <br><br>
             हास्दै खेल्दै बितिरहेको जिवनमा अन्धकारका बादल छाउन थाले । वि.सं. २०१२ बैशाख १२ गते १५ वर्षको उमेरमा पत्नी वियोग खप्न पुग्नुभयो । प्राण प्यारीको मृत्युले उनलाई केही समय मुटु रोगले असाध्यै च्याप्यो । अझ पत्नी वियोगको २७ दिन नहुदै कान्छा भाइ देविप्रसादको ११ वर्षको उमेरमा निधन भयो ।
-            <br>
+            <br><br>
             यावत समस्याका कारणले वहाँ वि.सं. २०१३ फाल्गुनमा भारतको मणिपुर राज्य, काङ्ग्लाटोङबीमा बसाईँ सर्नुभयो ।
-            <br>
+            <br><br>
             हिन्दु धर्मसंस्कारअनुसार दाहालले वि.सं. २०१५ बैशाखमा मणिपुर काङ्ग्लाटोङबी निवासी पिता देविप्रसाद तथा माता लिलादेवि मिश्रकी जेठी सुपुत्री टिकामाया मिश्रसँग विवाह बन्धनमा बाँधिनुभयो । बसाईँ सराईँको क्रमलाई जोड्दै वि.सं. २०१६ माघमा भारतकै मणिपुर राज्यको इराङमा बसोबास गर्न थाल्नुभयो ।
-            <br>
+            <br><br>
             ति काला बादल फेरी दाहालको जिवनमा मंडराउन थाले, वि.सं. २०१७ भदौमा पिता अभिचन्द्रलाई ज्वराले लिएर गयो । त्यसै साल मंसिरमा साईला दाजु दिनानाथ, छोरा छोरीको आगमन नभई परमधाम पुगे, ज्वरोकै कारणले । वि.सं. २०२७ सालमा जेठा दाजु नेत्रप्रसादलाई क्षयरोगले असाध्यै च्यापेर दाहालले एक्लै विभिन्न सहरका अस्पताल लगे, तरपनि पापी कालले नेत्रप्रसादलाई नलिई मानेन । साईली भाउजु नैनकला, एक बिर नारीको परिचय दिँदै पति वियोगको १९ वर्ष पश्चात् वि.सं. २०३६ हिउँदमा खसिन् । माथी सबैजनाको अन्तिम कर्म दामोदर कै हातबाट भयो ।
-            <br>
+            <br><br>
             नेत्रप्रसादका छोरा जयप्रकाशलाई वहाँले आफ्नो शरणमा लिनुभयो ।
-            <br>
+            <br><br>
             वि.सं. २०३६ सालमा आमा गौरालाई नि हैजाले लिएर गयो । त्यस बखत दामोदर भने आफ्नो पुरै परिवार लिएर अस्पताल हैजाको उपचार गर्न गएका थिए । ४ दिन पछि मात्र दाहाल आमाको काममा सरिक भए । त्यतिञ्जेल माइला दाजु यामनाथ संलग्न थिए ।
-            <br>
+            <br><br>
             यी सबै घटनाहरुबाट आजित भएर वि.सं. २०४० साल असोजमा नागाल्याण्ड, वि. सं २०४१ वैशाखमा आसामको हात्तीमराज्यान हुँदै वि.सं. २०५८ सालदेखि साविक गरामनी गा.वि.स. ७ हाल विर्तामोड नगरपालिका ९, लखीबारीमा बसोबास गर्दै आउनु भएको थियो ।
-            <br>
+            <br><br>
             वि.सं. २०६४ साल जेष्ठ ३१ गते पत्नी टिकामायालाई पनि पापी कालले हृदयघातको बाहनामा लिएर गयो ।
-            <br>
+            <br><br>
             कहिल्यै हार नमान्ने, मेहनती स्वभावका दाहालले आफ्नो पढाई बाबु अभिचन्द्रबाट, वहाँकै किताबहरु पढेर, पूरोहितको रुपमा घर चलाउँदै यहाँसम्म आइपुग्नु भयो । शिक्षालाई सर्वश्रेष्ठ मान्ने उनि, भावी सन्तती सबैलाई सकेसम्म गुणस्तरीय शिक्षा प्रदान गर्न तत्पर हुनुहुन्थ्यो । आफ्नो अन्तिम समयमा पनि वहाँले किताब पढ्न छोड्नुभएन ।
+            <br><br>
+
+            दाहाल परिवारका खम्बा, आदरणीय बुबा वि. सं. २०८२ साल माघ १२ गते ?? काे उमेरमा भगवानकाे प्याराे हुनुभयाे । वहाँकाे परिश्रम र ज्ञानकै कारण हामी यहाँ छाैँ । भौतिक शरीर हामीमाझ नभएतापनि बुवाकाे छाप दाहाल परिवारले कहिल्यै भुल्ने छैन । धन्यवाद  बुवा, सबैथोकको लागि 🖤 । 
             <br>
             <br>
             <!-- <div style="display: flex; align-items: baseline; margin-top:10px;  font-family:'Baloo 2'; font-weight:600;">
@@ -185,22 +354,183 @@
 
            
 
-            <div style="margin-top: 40px; margin-bottom: 50px; text-align: center; color: #4D515B">
-                अन्य तस्विरहरुको लागी माथीको गोलो तस्विर छुनुहोला ।
+            <div style="margin-top: 50px; margin-bottom: 10px; text-align: center; color: #4D515B">
+                हजुरबुबाकाे अन्य तस्विरहरुको लागी माथीको गोलो तस्विर छुनुहोला ।
             </div>
-        </div>
-        <div class="btn_container">
-                <button style="color: rgb(255, 255, 255); left: 0;">
-                    जिवनी पढ्न
-                </button>   
-                <a href="attendence.html">
-                    <button style="background-color: rgb(255, 255, 255); color: #152A57; margin-left: 5px;">
-                        उपस्थिति जनाउन
-                    </button>     
-                </a>
-                </div>   
+        </div>            
+
+                        <div class="modal" id="login-modal">
+                <span class="close-modal" style="position: absolute; top: 10px; right: 15px; font-size: 24px; cursor: pointer; color: #0f204e;">&times;</span>
+                <!-- <form action="connect.php" method="POST"> -->
+                <form id="list" action="https://script.google.com/macros/s/AKfycbw4EooSdoBwqvmcvYVmlUO9aDHcyoukxR9GPLlf01ukHV_M3qCRxxTHQoYNGlfuhS1Qdw/exec" method="POST" target="hidden_iframe">
+                    <h4 style="font-weight: 600; color:#0f204e; text-align: left;">तपाईंको जानकारी ?</h4>
+                    <input type="text" name="fullName" placeholder="पूरा नाम" maxlength="30" required>
+                    <input type="text" name="address" placeholder="ठेगाना" maxlength="30">
+                    <input type="tel" name="phoneNum" placeholder="सम्पर्क नम्बर" maxlength="10">
+                    <input type="hidden" name="clientSubmitTime" id="clientSubmitTime">
+                    <button class="submit" name="submit" type="submit">
+                        बुझाउनुहोस्
+                    </button>
+                </form>
             </div>
-        </div>
+
+
+            
+            
+            <!-- upastithi-btn le garda modal open hudaixa -->
+            <button class="upastithi-btn new_btn">
+                +👤 &nbsp उपस्थिति जनाउनुहाेस्
+            </button>
+
+            <div class="text-large">अनलाईन उपस्थिति सूची</div>
+
+
+
+
+            <!-- Thank You Popup -->
+             <div id="thank-you-popup" class="thank-you-popup">
+                धन्यवाद !
+            </div>
+
+            <table id="attendanceTable">
+                    <thead>
+                    <tr>
+                        <th style="width: 9%">क्र.<br>सं.</th>
+                        <th style="width: 36%">पूरा नाम</th>
+                        <th style="width: 30%">ठेगाना</th>
+                        <th style="width: 25%">सम्पर्क <br>नम्बर</th>
+                    </tr>
+                    
+                    </thead>
+                    <tbody id="data-output">
+
+                <tr><td>1</td><td>Anisha Mandal</td><td>Siraha</td><td>9700000050</td></tr>
+                <tr><td>2</td><td>Ram KC</td><td>Jhapa</td><td>9810000001</td></tr>
+                <tr><td>3</td><td>Sita Rai</td><td>Birtamode, Jhapa</td><td>9810000002</td></tr>
+                <tr><td>4</td><td>Bikash Thapa</td><td>Itahari</td><td>9810000003</td></tr>
+                <tr><td>5</td><td>Anu Sharma</td><td>Dharan-5</td><td>9810000004</td></tr>
+                <tr><td>6</td><td>Ramesh Adhikari</td><td>Damak, Jhapa</td><td>9810000005</td></tr>
+                <tr><td>7</td><td>Nisha Karki</td><td>Biratnagar</td><td>9810000006</td></tr>
+                <tr><td>8</td><td>Suman Basnet</td><td>Inaruwa-3</td><td>9810000007</td></tr>
+                <tr><td>9</td><td>Pooja Giri</td><td>Phidim, Panchthar</td><td>9810000008</td></tr>
+                <tr><td>10</td><td>Ajay Shrestha</td><td>Kathmandu</td><td>9810000009</td></tr>
+                <tr id="loading-row">
+  <td colspan="4" style="text-align: center;">
+    <div class="spinner"></div>
+    <div style="margin-top:10px; font-size: 14px; font-family: 'Baloo 2'; font-weight: 600;">लोड हुँदैछ...</div>
+  </td>
+</tr>
+
+
+
+                        </tbody>
+                    
+                </table>
     </div>
+
+    <script>            // Automatically trigger the shrink effect when the page loads
+            document.addEventListener("DOMContentLoaded", function () {
+            const button = document.querySelector('.new_btn');
+            if (button) {
+                button.classList.add('shrink-effect');
+            }
+            });
+
+            $(function(){
+
+                //Modal
+                $('.upastithi-btn').click(function(){
+                    $('#login-modal').fadeIn().css("display", "flex");
+                });
+
+                $('.close-modal').click(function() {
+                    $('#login-modal').fadeOut();
+                });
+
+                $(document).mouseup(function(e) {
+                    var modal = $('#login-modal');
+                    if (!modal.is(e.target) && modal.has(e.target).length === 0) {
+                    modal.fadeOut();
+                    }
+                });
+
+        $('#list').on('submit', function(e) {
+
+            // Show thank-you popup after 1 second
+            setTimeout(function() {
+                const popup = document.getElementById('thank-you-popup');
+                if (popup) {
+                    popup.style.display = 'flex';
+
+                    // Hide popup after 3 seconds
+                    setTimeout(() => {
+                        popup.style.display = 'none';
+                    }, 2000);
+                }
+
+                // Close modal
+                $('#login-modal').fadeOut();
+
+                // Reset form fields
+                document.getElementById('list').reset();
+            }, 250);
+        });
+    });
+
+    
+
+    // fetch('https://script.google.com/macros/s/AKfycbxvOAiiztHP1sXtmBwVbKD2fyu3cZD65B2wDWrcNEqktdXH-uYjTl92aRFY25VGRf0m-A/exec')
+    // .then(res => res.json())
+    // .then(data => console.log(data));
+
+    function handleData(response){
+        console.log("JSONP data", response);;
+    }
+
+    function handleData(response) {
+    console.log("Sheet data received:", response);
+
+    const tbody = document.getElementById("data-output");
+    tbody.innerHTML = ""; // clear old rows
+
+    if (!response || !response.data || response.data.length === 0) {
+        tbody.innerHTML = "<tr><td colspan='4'>No data found</td></tr>";
+        return;
+    }
+
+    response.data.forEach((row, index) => {
+        const tr = document.createElement("tr");
+
+        tr.innerHTML = `
+            <td>${row["S.N."] || index + 1}</td>
+            <td>${row["fullName"] || ""}</td>
+            <td>${row["address"] || ""}</td>
+            <td>${row["phoneNum"] || ""}</td>
+        `;
+
+        tbody.appendChild(tr);
+    });
+}
+
+
+const DATA_URL = "https://script.google.com/macros/s/AKfycbw4EooSdoBwqvmcvYVmlUO9aDHcyoukxR9GPLlf01ukHV_M3qCRxxTHQoYNGlfuhS1Qdw/exec?callback=handleData";
+
+function loadData() {
+    const oldScript = document.getElementById("jsonp-script");
+    if (oldScript) oldScript.remove();
+
+    const script = document.createElement("script");
+    script.src = DATA_URL + "&t=" + new Date().getTime(); // prevent cache
+    script.id = "jsonp-script";
+    document.body.appendChild(script);
+}
+
+// initial load
+loadData();
+
+// refresh every 1 second
+setInterval(loadData, 1000);
+</script>
+
 </body>
 </html>
