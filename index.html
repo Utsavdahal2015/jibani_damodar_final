@@ -2,7 +2,7 @@
 <html lang="ne">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>जिवनी | स्व. दामाेदर दाहाल</title>
     <style>
         * {
@@ -21,11 +21,16 @@
             font-family: "Baloo 2", sans-serif;
         }
 
+        /* Hides scrollbar for Chrome, Safari and Opera */
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
         .container {
-            width: 400px;
+            width: 94%;
             height: auto;
             margin: auto;
-            padding: 10px;
+            padding: 0px;
             position: relative;   
         }
 
@@ -52,11 +57,14 @@
 
         .btn_container{
             height: 40px;
-            width:380px;
+            width:390px;
             background-color: rgb(255, 255, 255);
             border-radius: 40px;
             position: fixed;
             bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+
         }
 
     .custom-image{
@@ -73,7 +81,7 @@
         width: 25px;
         height: auto;
         position: absolute;
-        left: 36px;
+        left: 30px;
         top: 196px;
         transform: translateX(-50%);
     }
@@ -82,9 +90,8 @@
         width: 25px;
         height: auto;
         position: absolute;
-        left: 355px;
+        right: 18px;
         top: 205px;
-        transform: translateX(-50%);
     }
 
         
@@ -97,20 +104,20 @@
 </head>
 <body>
     <div class="container">
-        <div>आयो टप्प टिप्यो लग्यो, मिति पुग्यो टारेर टर्दैन त्यो,<br>
+        <div style="margin-top: 10px;">आयो टप्प टिप्यो लग्यो, मिति पुग्यो टारेर टर्दैन त्यो,<br>
             इन्द्रै विन्ती गरुन् झुकेर पदमा, त्यो विन्ती मान्दैन त्यो</div>
 
         <img src="birth.png" class="birth">
 
-        <div style="position: absolute; left: 25px; top: 228px; font-size: 16px; font-weight: 600;">जन्म<br></div>
-        <div style="position: absolute; left: px; top: 248px;">१९९७/०२/२८</div>
+        <div style="position: absolute; left: 18px; top: 228px; font-size: 16px; font-weight: 600;">जन्म<br></div>
+        <div style="position: absolute; left: auto; top: 248px;">१९९७/०२/२८</div>
 
 
         <img src="demise.png" class="demise">
 
         
-        <div style="position: absolute; left: 325px; top: 228px; font-size: 16px; font-weight: 600;">स्वर्गारोहण<br></div>
-        <div style="position: absolute; right:0; left: 315px; top: 248px;">२०८१/०१/१८</div>
+        <div style="position: absolute; right:0px; top: 228px; font-size: 16px; font-weight: 600;">स्वर्गारोहण<br></div>
+        <div style="position: absolute; right:0px; top: 248px;">२०८१/०१/१८</div>
         
         <a href="https://drive.google.com/drive/folders/1On6HS_gh-qa3DrkvRJx12DWqCjD-UP_2?usp=sharing" target="_blank">
             <img src="Picture.png" class="custom-image">
@@ -122,7 +129,7 @@
     
         
         <div style="text-align: justify; margin-top: 10px;  margin-bottom: 20px;">
-            दाहाल परिवारका अग्रज व्यक्तित्व, बद्लिदो समय अनुसारको सोच राख्ने, धेरै जनाको अन्तिम समयमा साथ दिनुहुने, निरन्तरता, अग्रसरता र परिश्रमका प्रतिक दामोदर दाहालको जन्म वि.सं. १९९७ जेष्ठ २८ गते भएको थियो । ताप्लेजुङ्ग जिल्ला आङ्खोप, मालबासेमा अभिचन्द्रकी धर्मपत्नी गौराको कोखबाट काईलो सुपुत्रका रुपमा दाहालको जन्म भयो ।
+            दाहालदाहालदाहालदाहालदाहाल परिवारका अग्रज व्यक्तित्व, बद्लिदो समय अनुसारको सोच राख्ने, धेरै जनाको अन्तिम समयमा साथ दिनुहुने, निरन्तरता, अग्रसरता र परिश्रमका प्रतिक दामोदर दाहालको जन्म वि.सं. १९९७ जेष्ठ २८ गते भएको थियो । ताप्लेजुङ्ग जिल्ला आङ्खोप, मालबासेमा अभिचन्द्रकी धर्मपत्नी गौराको कोखबाट काईलो सुपुत्रका रुपमा दाहालको जन्म भयो ।
             <br>
             २००७ साल जेष्ठ ५ गते १० वर्षको उमेरमा पाँचथर जिल्ला तिखेम्बा निवासी पिता भवानीप्रसाद र माता लिलावती नेपालकी जेठी सुपुत्री मेनुका नेपालसँग वहाँ विवाह बन्धनमा बाँधिनुभयो ।
             <br>
@@ -156,7 +163,7 @@
                 स्वं. मेनुका, स्वं. टिकामाया दाहाल
 
             <div style="font-size:18px; font-weight:600; margin-top: 10px;"> छोरा बुहारी (४):</div>
-                नन्दु + भिमा, <br>चन्द्र + स्वं. तारा, अम्बिका, नारद + कमला, डम्बर + कविता दाहाल
+                नन्दु + भिमा, चन्द्र + स्वं. तारा, अम्बिका, नारद + कमला, डम्बर + कविता दाहाल
                
             
             <div style="font-size:18px; font-weight:600; margin-top: 10px;"> छोरी–ज्वाईँ (४):</div>
@@ -172,7 +179,7 @@
                 आर्शित भट्टराई, मिजास सापकोटा
 
             <div style="font-size:18px; font-weight:600; margin-top: 10px;"> पनातिनी (६):</div>
-                अग्रता भट्टराई, मानुसी सापकोटा, सुज्ञानी नेपाल, खुसी घिमिरे, सेभिका घिमिरे, ??? तिम्सिना
+                अग्रता भट्टराई, मानुसी सापकोटा, सुज्ञानी नेपाल, खुसी घिमिरे, सेभिका घिमिरे, लक्षिता तिम्सिना
 
            
 
@@ -185,7 +192,7 @@
                     जिवनी पढ्न
                 </button>   
                 <a href="attendence.html">
-                    <button style="background-color: rgb(255, 255, 255); color: #152A57; margin-left: 1px;">
+                    <button style="background-color: rgb(255, 255, 255); color: #152A57; margin-left: 5px;">
                         उपस्थिति जनाउन
                     </button>     
                 </a>
